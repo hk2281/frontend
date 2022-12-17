@@ -1,0 +1,28 @@
+<div class="conteiner p-3 mb-2 " *ngIf="!isListEmpty">
+    <table class="table table-dark text-center">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">name</th>
+            <th scope="col">country</th>
+            <th scope="col">contact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let providers of provider">
+            <td>{{providers.id}}</td>
+            <td>{{providers.name}}</td>
+            <td>{{providers.country}}</td>
+            <td>{{providers.contact}}</td>
+            <td><button class="btn btn-outline-primary" routerLink="detail/{{providers.id}}"><i class="far fa-eye"></i> просмотр</button></td>
+            <td><button class="btn btn-outline-warning" routerLink="update/{{providers.id}}"><i class="far fa-edit"></i> редактировать</button></td>
+            <td><button class="btn btn-outline-danger" (click)="delete(providers.id)"><i class="far fa-trash-alt"></i> удалить</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<div class="container" *ngIf="isListEmpty">
+  <div class="p-3 mb-2 bg-dark text-white text-center"><h2>{{isListEmpty}}</h2></div>
+</div>
+

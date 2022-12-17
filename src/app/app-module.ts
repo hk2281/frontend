@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
@@ -27,6 +26,10 @@ import { ListWorkerComponent } from './worker/list-worker.component';
 import { DetailWorkerComponent } from './worker/detail-worker.component';
 import { UpdateWorkerComponent } from './worker/update-worker.component';
 import { CreateWorkerComponent } from './worker/create-worker.component';
+import { ListProwiderComponent } from './provider/list-prowider.component';
+import { CreateProwiderComponent } from './provider/create-prowider.component';
+import { DetailProwiderComponent } from './provider/detail-prowider.component';
+import { UpdateProwiderComponent } from './provider/update-prowider.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +49,10 @@ import { CreateWorkerComponent } from './worker/create-worker.component';
     DetailWorkerComponent,
     UpdateWorkerComponent,
     CreateWorkerComponent,
+    ListProwiderComponent,
+    CreateProwiderComponent,
+    DetailProwiderComponent,
+    UpdateProwiderComponent,
   ],
   imports: [
     BrowserModule,

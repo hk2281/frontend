@@ -8,6 +8,10 @@ import { CreateCategoryComponent } from './category/create-category.component';
 import { DetailCategoryComponent } from './category/detail-category.component';
 import { ListCategoryComponent } from './category/list-category.component';
 import { UpdateCategoryComponent } from './category/update-category.component';
+import { CreateProwiderComponent } from './provider/create-prowider.component';
+import { DetailProwiderComponent } from './provider/detail-prowider.component';
+import { ListProwiderComponent } from './provider/list-prowider.component';
+import { UpdateProwiderComponent } from './provider/update-prowider.component';
 import { CreateShopComponent } from './shop/create-shop.component';
 import { DetailShopComponent } from './shop/detail-shop.component';
 import { ListShopComponent } from './shop/list-shop.component';
@@ -18,6 +22,10 @@ import { ListWorkerComponent } from './worker/list-worker.component';
 import { UpdateWorkerComponent } from './worker/update-worker.component';
 
 const routes: Routes = [
+  {path: 'provider', component: ListProwiderComponent},
+  {path: 'provider/create', component: CreateProwiderComponent},
+  {path: 'provider/detail/:id', component: DetailProwiderComponent},
+  {path: 'provider/update/:id', component: UpdateProwiderComponent},
   {path: 'worker', component: ListWorkerComponent},
   {path: 'worker/create', component: CreateWorkerComponent},
   {path: 'worker/detail/:id', component: DetailWorkerComponent},
