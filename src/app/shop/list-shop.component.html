@@ -11,7 +11,7 @@
           <tr *ngFor="let shops of shop">
             <td>{{shops.id}}</td>
             <td>{{shops.shopName}}</td>
-            <td>{{shops.shopAddress}</td>
+            <td>{{shops.shopAddress}}</td>
             <td><button class="btn btn-outline-primary" routerLink="detail/{{shops.id}}"><i class="far fa-eye"></i> просмотр</button></td>
             <td><button class="btn btn-outline-warning" routerLink="update/{{shops.id}}"><i class="far fa-edit"></i> редактировать</button></td>
             <td><button class="btn btn-outline-danger" (click)="delete(shops.id)"><i class="far fa-trash-alt"></i> удалить</button></td>

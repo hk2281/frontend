@@ -1,1 +1,22 @@
-<p>update-shop works!</p>
+<div class="container" *ngIf="shop">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="shopName">Name:</label>
+                    <input type="text" class="form-control" id="shopName" name="shopName" [(ngModel)]="shop.shopName"
+                        required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="shopAddress">Addres:</label>
+                    <input type="text" class="form-control" id="shopAddress" name="shopAddress" [(ngModel)]="shop.shopAddress"
+                        required autocomplete="off">
+                </div>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+                    <i class="fas fa-edit"></i> Обновить</button>
+                <button class="btn btn-outline-primary btn-block" (click)="volver()"><i
+                        class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+            </form>
+        </div>
+    </div>
+</div>

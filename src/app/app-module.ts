@@ -23,6 +23,10 @@ import { ListShopComponent } from './shop/list-shop.component';
 import { DetailShopComponent } from './shop/detail-shop.component';
 import { UpdateShopComponent } from './shop/update-shop.component';
 import { CreateShopComponent } from './shop/create-shop.component';
+import { ListWorkerComponent } from './worker/list-worker.component';
+import { DetailWorkerComponent } from './worker/detail-worker.component';
+import { UpdateWorkerComponent } from './worker/update-worker.component';
+import { CreateWorkerComponent } from './worker/create-worker.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +42,10 @@ import { CreateShopComponent } from './shop/create-shop.component';
     DetailShopComponent,
     UpdateShopComponent,
     CreateShopComponent,
+    ListWorkerComponent,
+    DetailWorkerComponent,
+    UpdateWorkerComponent,
+    CreateWorkerComponent,
   ],
   imports: [
     BrowserModule,
