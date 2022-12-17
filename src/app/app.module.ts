@@ -15,6 +15,10 @@ import { ListAssortmentComponent } from './assortment/list-assortment.component'
 import { CreateAssortmentComponent } from './assortment/create-assortment.component';
 import { UpdateAssortmentComponent } from './assortment/update-assortment.component';
 import { DetailAssortmentComponent } from './assortment/detail-assortment.component';
+import { CreateCategoryComponent } from './category/create-category.component';
+import { UpdateCategoryComponent } from './category/update-category.component';
+import { DetailCategoryComponent } from './category/detail-category.component';
+import { ListCategoryComponent } from './category/list-category.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +26,10 @@ import { DetailAssortmentComponent } from './assortment/detail-assortment.compon
     CreateAssortmentComponent,
     UpdateAssortmentComponent,
     DetailAssortmentComponent,
+    CreateCategoryComponent,
+    UpdateCategoryComponent,
+    DetailCategoryComponent,
+    ListCategoryComponent,
   ],
   imports: [
     BrowserModule,

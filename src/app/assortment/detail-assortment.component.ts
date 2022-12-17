@@ -40,6 +40,6 @@ export class DetailAssortmentComponent implements OnInit {
     )
   };
   volver(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['assortment/']);
   }
 }

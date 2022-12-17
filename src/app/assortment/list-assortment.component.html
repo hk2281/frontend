@@ -16,8 +16,8 @@
             <td>{{assortment.price}}€</td>
             <td>{{assortment.provider.name}}</td>
             <td>{{assortment.category.cat_title}}</td>
-            <td><button class="btn btn-outline-primary" routerLink="/datail/{{assortment.id}}"><i class="far fa-eye"></i> просмотр</button></td>
-            <td><button class="btn btn-outline-warning" routerLink="/update/{{assortment.id}}"><i class="far fa-edit"></i> редактировать</button></td>
+            <td><button class="btn btn-outline-primary" routerLink="datail/{{assortment.id}}"><i class="far fa-eye"></i> просмотр</button></td>
+            <td><button class="btn btn-outline-warning" routerLink="update/{{assortment.id}}"><i class="far fa-edit"></i> редактировать</button></td>
             <td><button class="btn btn-outline-danger" (click)="delete(assortment.id)"><i class="far fa-trash-alt"></i> удалить</button></td>
           </tr>
         </tbody>

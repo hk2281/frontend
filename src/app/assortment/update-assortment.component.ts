@@ -31,7 +31,7 @@ export class UpdateAssortmentComponent {
         this.toastr.error(err.error.message, 'Fail', {
           timeOut: 3000,  positionClass: 'toast-top-center',
         });
-        this.router.navigate(['/']);
+        this.router.navigate(['assortment/']);
       }
     );
   }
@@ -44,7 +44,7 @@ export class UpdateAssortmentComponent {
         this.toastr.success(data.message, 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
-        this.router.navigate(['/']);
+        this.router.navigate(['assortment/']);
       },
       err => {
         this.toastr.error(err.error.message, 'Fail', {
@@ -55,7 +55,7 @@ export class UpdateAssortmentComponent {
   }
 
   volver(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['assortment/']);
   }
 
 }
