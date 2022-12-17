@@ -13,6 +13,8 @@ export class DetailWorkerComponent implements OnInit{
 
   worker: Worker| any = null;
 
+  keys: any
+
   constructor(
     private workerService: WorkerService,
     private activatedRoute: ActivatedRoute,
@@ -26,6 +28,8 @@ export class DetailWorkerComponent implements OnInit{
     this.workerService.detail(id).subscribe(
       data => {
         this.worker = data;
+        this.keys = Object.keys(data['shop']);
+        console.log(this.keys)
       },
       err => {
         this.toastr.error(err.error.message, 'Fail', {

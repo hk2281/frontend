@@ -17,7 +17,7 @@
             <td>{{workers.lastName}}</td>
             <td>{{workers.positionRole}}</td>
             <td>{{workers.contact}}</td>
-            <td>{{workers.shop.shopName | json}}</td>
+            <td>{{workers.shop.shopName}}</td>
             <td><button class="btn btn-outline-primary" routerLink="detail/{{workers.id}}"><i class="far fa-eye"></i> просмотр</button></td>
             <td><button class="btn btn-outline-warning" routerLink="update/{{workers.id}}"><i class="far fa-edit"></i> редактировать</button></td>
             <td><button class="btn btn-outline-danger" (click)="delete(workers.id)"><i class="far fa-trash-alt"></i> удалить</button></td>

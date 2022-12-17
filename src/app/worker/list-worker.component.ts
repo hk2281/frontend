@@ -10,7 +10,6 @@ import Swal from 'sweetalert2';
 export class ListWorkerComponent implements OnInit{
 
   worker: Worker[] | any = [];
-
   isListEmpty: undefined | any = null;
 
 
@@ -26,7 +25,6 @@ export class ListWorkerComponent implements OnInit{
   loadWorker(): void {
     this.workerService.listAll().subscribe(
       (data) => {
-        console.log(data)
         this.worker = data;
       },
       (err) => {

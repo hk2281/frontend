@@ -3,14 +3,14 @@
         <div class="col-md-4 mx-auto">
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="cat_tite">category title</label>
+                    <label for="cat_tite">категория </label>
                     <input type="text" class="form-control" id="cat_tite" name="cat_tite" [(ngModel)]="cat_title" required
                         autocomplete="off">
                 </div>
                 <button type="submit" class="btn btn-outline-success btn-block" [disabled]="!f.valid">
-                    <i class="far fa-plus-square"></i> Crear</button>
+                    <i class="far fa-plus-square"></i> создать </button>
                 <button class="btn btn-outline-primary btn-block" (click)="volver()"><i
-                        class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                        class="fas fa-arrow-alt-circle-left"></i> назад </button>
             </form>
         </div>
     </div>
