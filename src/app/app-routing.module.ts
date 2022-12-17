@@ -8,8 +8,16 @@ import { CreateCategoryComponent } from './category/create-category.component';
 import { DetailCategoryComponent } from './category/detail-category.component';
 import { ListCategoryComponent } from './category/list-category.component';
 import { UpdateCategoryComponent } from './category/update-category.component';
+import { CreateShopComponent } from './shop/create-shop.component';
+import { DetailShopComponent } from './shop/detail-shop.component';
+import { ListShopComponent } from './shop/list-shop.component';
+import { UpdateShopComponent } from './shop/update-shop.component';
 
 const routes: Routes = [
+  {path: 'shop', component: ListShopComponent},
+  {path: 'shop/create', component: CreateShopComponent},
+  {path: 'shop/detail/:id', component: DetailShopComponent},
+  {path: 'shop/update/:id', component: UpdateShopComponent},
   {path: 'category', component: ListCategoryComponent},
   {path: 'category/create', component: CreateCategoryComponent},
   {path: 'category/detail/:id', component: DetailCategoryComponent},
