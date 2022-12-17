@@ -1,1 +1,24 @@
-<p>list-category works!</p>
+<div class="conteiner p-3 mb-2 " *ngIf="!isListEmpty">
+    <table class="table table-dark text-center">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">cat_title</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let category of category">
+            <td>{{category.id}}</td>
+            <td>{{category.cat_title}}</td>
+            <td><button class="btn btn-outline-primary" routerLink="detail/{{category.id}}"><i class="far fa-eye"></i> просмотр</button></td>
+            <td><button class="btn btn-outline-warning" routerLink="update/{{category.id}}"><i class="far fa-edit"></i> редактировать</button></td>
+            <td><button class="btn btn-outline-danger" (click)="delete(category.id)"><i class="far fa-trash-alt"></i> удалить</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<div class="container" *ngIf="isListEmpty">
+  <div class="p-3 mb-2 bg-dark text-white text-center"><h2>{{isListEmpty}}</h2></div>
+</div>
+

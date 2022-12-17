@@ -60,10 +60,10 @@ export class ListAssortmentComponent implements OnInit {
       reverseButtons: true,
       confirmButtonText: 'Да, уничтожить',
       cancelButtonText: 'No, пощадить?',
-      background: '#fff url(https://sweetalert2.github.io/images/trees.png)',
+      background: '#fff url("./../assets/nyan-cat.gif")',
       backdrop: `
         rgba(80,40,10,0.4)
-        url("https://sweetalert2.github.io/images/nyan-cat.gif")
+        url("./../assets/nyan-cat.gif")
         left top
         no-repeat
       `

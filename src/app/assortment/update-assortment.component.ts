@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Assortment } from '../models/assortment';
@@ -9,7 +9,7 @@ import { AssortmentService } from '../services/assortment.service';
   templateUrl: './update-assortment.component.html',
   styleUrls: ['./update-assortment.component.scss']
 })
-export class UpdateAssortmentComponent {
+export class UpdateAssortmentComponent implements OnInit {
   assortment: Assortment | any = null;
 
   constructor(
