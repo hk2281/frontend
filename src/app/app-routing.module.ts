@@ -12,8 +12,16 @@ import { CreateShopComponent } from './shop/create-shop.component';
 import { DetailShopComponent } from './shop/detail-shop.component';
 import { ListShopComponent } from './shop/list-shop.component';
 import { UpdateShopComponent } from './shop/update-shop.component';
+import { CreateWorkerComponent } from './worker/create-worker.component';
+import { DetailWorkerComponent } from './worker/detail-worker.component';
+import { ListWorkerComponent } from './worker/list-worker.component';
+import { UpdateWorkerComponent } from './worker/update-worker.component';
 
 const routes: Routes = [
+  {path: 'worker', component: ListWorkerComponent},
+  {path: 'worker/create', component: CreateWorkerComponent},
+  {path: 'worker/detail/:id', component: DetailWorkerComponent},
+  {path: 'worker/update/:id', component: UpdateWorkerComponent},
   {path: 'shop', component: ListShopComponent},
   {path: 'shop/create', component: CreateShopComponent},
   {path: 'shop/detail/:id', component: DetailShopComponent},

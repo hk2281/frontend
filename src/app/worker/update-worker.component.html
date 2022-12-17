@@ -1,1 +1,37 @@
-<p>update-worker works!</p>
+<div class="container" *ngIf="worker">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="firstName">Name:</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="worker.firstName"
+                        required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last name:</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="worker.lastName"
+                        required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="positionRole">position:</label>
+                    <input type="text" class="form-control" id="positionRole" name="positionRole" [(ngModel)]="worker.positionRole"
+                        required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="contact">contact:</label>
+                    <input type="text" class="form-control" id="contact" name="contact" [(ngModel)]="worker.contact"
+                        required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="shop">shop:</label>
+                    <input type="number" class="form-control" id="shop" name="shop" [(ngModel)]="worker.shop"
+                        required autocomplete="off">
+                </div>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+                    <i class="fas fa-edit"></i> Обновить</button>
+                <button class="btn btn-outline-primary btn-block" (click)="volver()"><i
+                        class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+            </form>
+        </div>
+    </div>
+</div>

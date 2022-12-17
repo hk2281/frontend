@@ -1,1 +1,23 @@
-<p>detail-worker works!</p>
+<div class="container">
+    <div class="row mt-5" *ngIf="worker">
+        <div class="col-md-4 mx-auto">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">
+                    Detalle
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>ID: </b>{{worker.id}}</li>
+                    <li class="list-group-item"><b>first Name: </b>{{worker.firstName}}</li>
+                    <li class="list-group-item"><b>last Name: </b>{{worker.lastName}}</li>
+                    <li class="list-group-item"><b>position Role: </b>{{worker.positionRole}}</li>
+                    <li class="list-group-item"><b>contact: </b>{{worker.contact}}</li>
+                    <li class="list-group-item"><b>shop: </b>{{worker.shop | json}}</li>
+                </ul>
+                <div class="card-footer">
+                    <button class="btn btn-outline-primary btn-block" (click)="volver()"><i
+                            class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
