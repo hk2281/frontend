@@ -8,6 +8,7 @@ import { CreateCategoryComponent } from './category/create-category.component';
 import { DetailCategoryComponent } from './category/detail-category.component';
 import { ListCategoryComponent } from './category/list-category.component';
 import { UpdateCategoryComponent } from './category/update-category.component';
+import { GridListOverviewExample } from './grid/list-grid.component';
 import { CreateProwiderComponent } from './provider/create-prowider.component';
 import { DetailProwiderComponent } from './provider/detail-prowider.component';
 import { ListProwiderComponent } from './provider/list-prowider.component';
@@ -22,6 +23,7 @@ import { ListWorkerComponent } from './worker/list-worker.component';
 import { UpdateWorkerComponent } from './worker/update-worker.component';
 
 const routes: Routes = [
+  {path: '', component: GridListOverviewExample},
   {path: 'provider', component: ListProwiderComponent},
   {path: 'provider/create', component: CreateProwiderComponent},
   {path: 'provider/detail/:id', component: DetailProwiderComponent},

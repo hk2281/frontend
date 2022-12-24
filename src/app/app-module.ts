@@ -30,6 +30,11 @@ import { ListProwiderComponent } from './provider/list-prowider.component';
 import { CreateProwiderComponent } from './provider/create-prowider.component';
 import { DetailProwiderComponent } from './provider/detail-prowider.component';
 import { UpdateProwiderComponent } from './provider/update-prowider.component';
+import { GridListOverviewExample } from './grid/list-grid.component';
+import { MatGridListModule   } from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card'
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +58,7 @@ import { UpdateProwiderComponent } from './provider/update-prowider.component';
     CreateProwiderComponent,
     DetailProwiderComponent,
     UpdateProwiderComponent,
+    GridListOverviewExample,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +66,8 @@ import { UpdateProwiderComponent } from './provider/update-prowider.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
+    MatGridListModule,
+    MatCardModule,
     ToastrModule.forRoot({
       positionClass :'toast-bottom-right'
     })

@@ -10,7 +10,6 @@ import Swal from 'sweetalert2';
 })
 export class ListCategoryComponent implements OnInit {
   category: Category[] | any = [];
-
   isListEmpty: undefined | any = null;
 
   constructor(
@@ -37,7 +36,7 @@ export class ListCategoryComponent implements OnInit {
       }
     );
   }
-
+  
   delete(id: number): void {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
