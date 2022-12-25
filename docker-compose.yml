@@ -1,5 +1,6 @@
 version: '3'
 services:
+
   db:
     image: hk2281/alex_bd:latest
     networks:
@@ -9,16 +10,24 @@ services:
 
   backend:
     image: hk2281/nest:latest
+    depends_on:
+      - db
+    condition: service_completed_successfully
     networks:
       - localMad
     ports:
       - "8080:8080"
+  
   frontend:
     image: hk2281/angular_v1_nginx:latest
+    depends_on:
+      - backend
+    condition: service_completed_successfully
     ports:
       - "80:80"
     networks:
       - localMad
+
 
 networks:
   localMad:
