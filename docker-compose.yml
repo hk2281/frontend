@@ -1,0 +1,26 @@
+version: '3'
+services:
+  db:
+    image: hk2281/alex_bd:latest
+    networks:
+      localMad:
+        aliases:
+          - mysql
+
+  backend:
+    image: hk2281/nest:latest
+    networks:
+      - localMad
+    ports:
+      - "8080:8080"
+  frontend:
+    image: hk2281/angular_v1_nginx:latest
+    ports:
+      - "80:80"
+    networks:
+      - localMad
+
+networks:
+  localMad:
+    driver: bridge
+
