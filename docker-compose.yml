@@ -11,23 +11,24 @@ services:
   backend:
     image: hk2281/nest:latest
     depends_on:
-      - db
-    condition: service_completed_successfully
+      db:
+        condition: service_started
     networks:
       - localMad
     ports:
       - "8080:8080"
+    restart: always
   
   frontend:
     image: hk2281/angular_v1_nginx:latest
     depends_on:
-      - backend
-    condition: service_completed_successfully
+      backend:
+        condition: service_started
     ports:
       - "80:80"
     networks:
       - localMad
-
+    restart: always
 
 networks:
   localMad:
